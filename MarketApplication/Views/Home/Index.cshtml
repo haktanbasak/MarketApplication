@@ -1,31 +1,73 @@
-﻿@{
-    ViewBag.Title = "Home Page";
+﻿@using MarketApplication.Models;
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    List<MagazaKategori> mKategoriler = (List<MagazaKategori>)ViewBag.Kategoriler;
+    List<Kategori> urunKategoriler = (List<Kategori>)ViewBag.UrunKategoriler;
+    List<Urun> urunler = (List<Urun>)ViewBag.Urunler;
+
+
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+<section class="categories">
+    <div class="container">
+        <div class="row">
+            <div class="categories__slider owl-carousel">
+                @foreach (var item in mKategoriler)
+                {
+                    <div class="col-lg-3">
+                        <div class="categories__item set-bg" data-setbg="@item.Resim">
+                            <h5><a href="#">@item.Ad</a></h5>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Categories Section End -->
+<!-- Featured Section Begin -->
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+
+<section class="featured spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title">
+                    <h2>Önerilen Ürünler</h2>
+                </div>
+                <div class="featured__controls">
+                    <ul>
+                        <li class="active" data-filter="*">All</li>
+                        @foreach (var item in urunKategoriler)
+                        {
+                            <li data-filter=".@item.Ad.ToLower().Replace(" ","-")">@item.Ad</li>
+                        }
+
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="row featured__filter">
+            @foreach (var item in urunler)
+            {
+                <div class="col-lg-3 col-md-4 col-sm-6 mix oranges @item.Kategori.Ad.ToLower().Replace(" ","-")">
+                    <div class="featured__item">
+                        <div class="featured__item__pic set-bg" data-setbg="@item.Fotograf">
+                            <ul class="featured__item__pic__hover">
+                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="featured__item__text">
+                            <h6><a href="/urun/detay?UrunId=@item.UrunId">@item.Ad</a></h6>
+                            <h5>₺@item.Fiyat</h5>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
+</section>
+
