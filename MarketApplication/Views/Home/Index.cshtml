@@ -8,6 +8,8 @@
 
 
 }
+@Html.Partial("Kategoriler")
+
 
 <section class="categories">
     <div class="container">
@@ -28,7 +30,6 @@
 <!-- Categories Section End -->
 <!-- Featured Section Begin -->
 
-
 <section class="featured spad">
     <div class="container">
         <div class="row">
@@ -38,7 +39,7 @@
                 </div>
                 <div class="featured__controls">
                     <ul>
-                        <li class="active" data-filter="*">All</li>
+                        <li class="active" data-filter="*">Hepsi</li>
                         @foreach (var item in urunKategoriler)
                         {
                             <li data-filter=".@item.Ad.ToLower().Replace(" ","-")">@item.Ad</li>

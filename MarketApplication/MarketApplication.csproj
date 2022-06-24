@@ -127,6 +127,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\KategoriController.cs" />
     <Compile Include="Controllers\MagazaController.cs" />
     <Compile Include="Controllers\UrunController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -154,6 +155,10 @@
     <Compile Include="Migrations\202206201902160_4.cs" />
     <Compile Include="Migrations\202206201902160_4.designer.cs">
       <DependentUpon>202206201902160_4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206241655398_kategoriResim.cs" />
+    <Compile Include="Migrations\202206241655398_kategoriResim.Designer.cs">
+      <DependentUpon>202206241655398_kategoriResim.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Kategori.cs" />
     <Compile Include="Models\Kullanici.cs" />
@@ -331,6 +336,9 @@
     <Content Include="Views\Shared\_Header.cshtml" />
     <Content Include="Views\Urun\Detay.cshtml" />
     <Content Include="Views\Magaza\Index.cshtml" />
+    <Content Include="Views\Home\Kategoriler.cshtml" />
+    <Content Include="Views\Kategori\Index.cshtml" />
+    <Content Include="Views\Kategori\KategoriUrun.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -363,6 +371,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202206201902160_4.resx">
       <DependentUpon>202206201902160_4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206241655398_kategoriResim.resx">
+      <DependentUpon>202206241655398_kategoriResim.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

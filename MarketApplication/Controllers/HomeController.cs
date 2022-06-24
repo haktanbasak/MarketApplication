@@ -15,5 +15,11 @@ namespace MarketApplication.Controllers
             ViewBag.Urunler = db.Urun.ToList();
             return View();
         }
+
+        public PartialViewResult Kategoriler()
+        {
+            ViewBag.Kategoriler = db.MagazaKategori.ToList();
+            return PartialView();
+        }
     }
 }
