@@ -6,7 +6,7 @@ namespace MarketApplication.DbContexts
 {
     public class Context:DbContext
     {
-        public Context():base("defaultConnection")
+        public Context():base("con2")
         {
 
         }
