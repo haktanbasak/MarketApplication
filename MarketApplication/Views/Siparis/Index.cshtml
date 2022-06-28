@@ -12,13 +12,13 @@
 <section class="checkout spad">
     <div class="container">
         <div class="checkout__form">
-            <h4>Sipariş Detayları</h4>
+            <h4>Sipariş Detay</h4>
             <form action="/siparis/SiparisTamamla" method="post">
                 <div class="row">
                     <div class="col-lg-8 col-md-6">
                        
                         <div class="checkout__input">
-                            <p>Tam Addres<span>*</span></p>
+                            <p>Tam Adres<span>*</span></p>
                             <textarea name="adres" placeholder="tam adresinizi girin." class="form-control"></textarea>
                         </div>
                         <div class="row">
@@ -41,8 +41,8 @@
 
                     <div class="col-lg-4 col-md-6">
                         <div class="checkout__order">
-                            <h4>Your Order</h4>
-                            <div class="checkout__order__products">Products <span>Total</span></div>
+                            <h4>Siparişiniz</h4>
+                            <div class="checkout__order__products">Ürünler <span>Toplam</span></div>
                             <ul>
 
                                 @foreach (var item in sepetler)
