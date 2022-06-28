@@ -1,0 +1,51 @@
+﻿@model MarketApplication.Models.Siparis
+
+@{
+    ViewBag.Title = "Detay";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div>
+    <h4>Siparis</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Kullanici.AdSoyad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Kullanici.AdSoyad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.siparisStatu.Statu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.siparisStatu.Statu)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tutar)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tutar)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Adres)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Adres)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.SiparisId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

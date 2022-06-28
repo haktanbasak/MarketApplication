@@ -1,10 +1,10 @@
-﻿@model List<Magaza>
+﻿@model Magaza
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Detay";
     Layout = "~/Views/Shared/_Layout.cshtml";
-    List<MagazaKategori> mKategoriler = ViewBag.MagazaKategoriler;
-
 }
+
+
 
 <!-- Breadcrumb Section Begin -->
 <section class="breadcrumb-section set-bg" data-setbg="/assets/img/breadcrumb.jpg">
@@ -14,8 +14,8 @@
                 <div class="breadcrumb__text">
                     <h2>Mağaza</h2>
                     <div class="breadcrumb__option">
-                        <a href="./index.html">Home</a>
-                        <span>Mağaza</span>
+                        <a href="/">Home</a>
+                        <span>@Model.Ad</span>
                     </div>
                 </div>
             </div>
@@ -29,8 +29,6 @@
         <div class="row">
             <div class="col-lg-3 col-md-5">
                 <div class="sidebar">
-
-
                     <div class="sidebar__item">
                         <h4>Price</h4>
                         <div class="price-range-wrap">
@@ -53,44 +51,17 @@
                 </div>
             </div>
             <div class="col-lg-9 col-md-7">
-                <div class="filter__item">
-                    <div class="row">
-                        <div class="col-lg-4 col-md-5">
-                            <div class="filter__sort">
-                                <span>Sırala</span>
-                                <select name="MagazaKategoriId">
-                                    <option value="0">Kategori seçin</option>
-                                    @foreach (var item in mKategoriler)
-                                    {
-                                        <option value="@item.MagazaKategoriId">@item.Ad</option>
-                                    }
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4">
-                            <div class="filter__found">
-                                <h6><span>16</span> Products found</h6>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-3">
-                            <div class="filter__option">
-                                <span class="icon_grid-2x2"></span>
-                                <span class="icon_ul"></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <div class="row">
-                    @foreach (var item in Model)
+                    @foreach (var item in Model.Urunler)
                     {
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="@item.KapakGorsel">
+                                <div class="product__item__pic set-bg" data-setbg="@item.Fotograf">
 
                                 </div>
                                 <div class="product__item__text">
-                                    <h6><a href="/Magaza/detay?magazaId=@item.MagazaId">@item.Ad</a></h6>
-                                    <h5>@item.MinimumFiyat</h5>
+                                    <h6><a href="/urun/detay?urunid=@item.UrunId">@item.Ad</a></h6>
+                                    <h5>@item.Fiyat</h5>
                                 </div>
                             </div>
                         </div>

@@ -1,0 +1,69 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    List<Sepet> sepetler = (List<Sepet>)ViewBag.Sepetler;
+    double toplam = 0.0;
+}
+
+
+<!-- Checkout Section Begin -->
+<section class="checkout spad">
+    <div class="container">
+        <div class="checkout__form">
+            <h4>Sipariş Detayları</h4>
+            <form action="/siparis/SiparisTamamla" method="post">
+                <div class="row">
+                    <div class="col-lg-8 col-md-6">
+                       
+                        <div class="checkout__input">
+                            <p>Tam Addres<span>*</span></p>
+                            <textarea name="adres" placeholder="tam adresinizi girin." class="form-control"></textarea>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="checkout__input">
+                                    <p>Telefon<span>*</span></p>
+                                    <input type="text">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="checkout__input">
+                                    <p>Mail<span>*</span></p>
+                                    <input type="text">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="checkout__order">
+                            <h4>Your Order</h4>
+                            <div class="checkout__order__products">Products <span>Total</span></div>
+                            <ul>
+
+                                @foreach (var item in sepetler)
+                                {
+                                    <li>@item.Urun.Ad <span>@item.SepetTutar</span></li>
+                                    toplam += item.SepetTutar;
+                                }
+
+
+                            </ul>
+
+                            <div class="checkout__order__total">Toplam <span>@toplam</span></div>
+
+                                <button type="submit" class="site-btn">Siparişi Tamamla</button>
+                      
+                            
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<!-- Checkout Section End -->

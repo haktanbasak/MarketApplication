@@ -19,5 +19,6 @@ namespace MarketApplication.Models
         public virtual ICollection<Yorum> Yorumlar { get; set; }
 
 
+
     }
 }

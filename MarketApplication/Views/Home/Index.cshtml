@@ -8,6 +8,8 @@
 
 
 }
+
+
 @Html.Partial("Kategoriler")
 
 
@@ -19,7 +21,7 @@
                 {
                     <div class="col-lg-3">
                         <div class="categories__item set-bg" data-setbg="@item.Resim">
-                            <h5><a href="#">@item.Ad</a></h5>
+                            <h5><a href="/Magaza/Index/@item.MagazaKategoriId">@item.Ad</a></h5>
                         </div>
                     </div>
                 }

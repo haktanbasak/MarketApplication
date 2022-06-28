@@ -8,16 +8,18 @@ namespace MarketApplication.Controllers
 {
     public class MagazaController : BaseController
     {
-        public ActionResult Index()
+        public ActionResult Index(int id)
         {
             ViewBag.MagazaKategoriler = db.MagazaKategori.ToList();
-            var models = db.Magaza.ToList();
+            var models = db.Magaza.Where(x => x.MagazaKategoriId == id).ToList();
             return View(models);
         }
 
         public ActionResult Detay(int magazaId)
         {
-            var model = db.Magaza.Find(magazaId);
+            var model = db.Magaza
+                .Include("Urunler")
+                .FirstOrDefault(x => x.MagazaId == magazaId);
             return View(model);
         }
     }
