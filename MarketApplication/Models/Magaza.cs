@@ -17,6 +17,7 @@ namespace MarketApplication.Models
         public MagazaKategori Kategori { get; set; }
 
         public virtual ICollection<Yorum> Yorumlar { get; set; }
+        public virtual ICollection<Satici> Saticilar { get; set; }
 
 
 

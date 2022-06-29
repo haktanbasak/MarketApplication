@@ -13,7 +13,6 @@ namespace MarketApplication.Controllers
             ViewBag.Kategoriler = db.MagazaKategori.ToList();
             ViewBag.UrunKategoriler = db.Kategori.ToList();
             ViewBag.Urunler = db.Urun.ToList();
-
             
             return View();
         }

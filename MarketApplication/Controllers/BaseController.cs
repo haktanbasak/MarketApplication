@@ -19,7 +19,9 @@ namespace MarketApplication.Controllers
             if(db == null)
             {
                 db = new Context();
+           
             }
+
         }
 
         protected Kullanici GetKullanici(int id)

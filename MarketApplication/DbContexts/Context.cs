@@ -20,6 +20,7 @@ namespace MarketApplication.DbContexts
         public DbSet<SiparisStatu> SiparisStatu { get; set; }
         public DbSet<Yorum> Yorum { get; set; }
         public DbSet<Sepet> Sepet { get; set; }
+        public DbSet<Satici> Satici { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

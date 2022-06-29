@@ -120,6 +120,8 @@
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\KategoriController.cs" />
     <Compile Include="Controllers\MagazaController.cs" />
+    <Compile Include="Controllers\KullaniciController.cs" />
+    <Compile Include="Controllers\SaticiController.cs" />
     <Compile Include="Controllers\SiparisController.cs" />
     <Compile Include="Controllers\SepetController.cs" />
     <Compile Include="Controllers\YorumController.cs" />
@@ -142,10 +144,15 @@
     <Compile Include="Migrations\202206281731095_mig3.Designer.cs">
       <DependentUpon>202206281731095_mig3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202206291827335_satici_ekleme.cs" />
+    <Compile Include="Migrations\202206291827335_satici_ekleme.Designer.cs">
+      <DependentUpon>202206291827335_satici_ekleme.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Kategori.cs" />
     <Compile Include="Models\Kullanici.cs" />
     <Compile Include="Models\Magaza.cs" />
     <Compile Include="Models\MagazaKategori.cs" />
+    <Compile Include="Models\Satici.cs" />
     <Compile Include="Models\Siparis.cs" />
     <Compile Include="Models\SiparisStatu.cs" />
     <Compile Include="Models\Urun.cs" />
@@ -168,6 +175,7 @@
     <Content Include="assets\css\style.css" />
     <Content Include="assets\fonts\ElegantIcons.svg" />
     <Content Include="assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="assets\img\944b1158fe6182b672136771ea4452e5.png" />
     <Content Include="assets\img\banner\banner-1.jpg" />
     <Content Include="assets\img\banner\banner-2.jpg" />
     <Content Include="assets\img\blog\blog-1.jpg" />
@@ -191,6 +199,9 @@
     <Content Include="assets\img\categories\cat-3.jpg" />
     <Content Include="assets\img\categories\cat-4.jpg" />
     <Content Include="assets\img\categories\cat-5.jpg" />
+    <Content Include="assets\img\cheetah.jpg" />
+    <Content Include="assets\img\CHEETAH2.jpg" />
+    <Content Include="assets\img\CHEETAH3.png" />
     <Content Include="assets\img\featured\feature-1.jpg" />
     <Content Include="assets\img\featured\feature-2.jpg" />
     <Content Include="assets\img\featured\feature-3.jpg" />
@@ -233,6 +244,7 @@
     <Content Include="assets\img\product\product-7.jpg" />
     <Content Include="assets\img\product\product-8.jpg" />
     <Content Include="assets\img\product\product-9.jpg" />
+    <Content Include="assets\img\çita.png" />
     <Content Include="assets\index.html" />
     <Content Include="assets\js\bootstrap.min.js" />
     <Content Include="assets\js\jquery-3.3.1.min.js" />
@@ -298,6 +310,8 @@
     <Content Include="assets\Source\OwlCarousel2-2.3.4.zip" />
     <Content Include="assets\Source\sass.zip" />
     <Content Include="assets\Source\SlickNav-master.zip" />
+    <Content Include="Scripts\bootbox.js" />
+    <Content Include="Scripts\bootbox.min.js" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -368,6 +382,11 @@
     <Content Include="Views\Login\Register.cshtml" />
     <Content Include="Views\Yorum\MagazaYorumlar.cshtml" />
     <Content Include="Views\Yorum\UrunYorumlar.cshtml" />
+    <Content Include="Views\Login\Satici.cshtml" />
+    <Content Include="Views\Satici\Index.cshtml" />
+    <Content Include="Views\Satici\Siparisler.cshtml" />
+    <Content Include="Views\Siparis\Duzenle.cshtml" />
+    <Content Include="Views\Kullanici\Siparisler.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -384,6 +403,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202206281731095_mig3.resx">
       <DependentUpon>202206281731095_mig3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206291827335_satici_ekleme.resx">
+      <DependentUpon>202206291827335_satici_ekleme.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

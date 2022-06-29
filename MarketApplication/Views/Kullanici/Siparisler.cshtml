@@ -1,0 +1,45 @@
+﻿@model IEnumerable<MarketApplication.Models.Siparis>
+
+@{
+    ViewBag.Title = "Siparisler";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <table class="table table-bordered">
+        <tr>
+            <th>
+                Mağaza
+            </th>
+            <th>
+                Sipariş durumu
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tutar)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Adres)
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Satici.Magaza.Ad)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.siparisStatu.Statu)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Tutar)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Adres)
+                </td>
+            </tr>
+        }
+
+    </table>
+
+</div>

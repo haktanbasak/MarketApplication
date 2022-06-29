@@ -11,6 +11,9 @@ namespace MarketApplication.Models
         public int KullaniciId { get; set; }
         public Kullanici Kullanici { get; set; }
 
+        public int SaticiId { get; set; }
+        public Satici Satici { get; set; }
+
         public int SiparisStatuId { get; set; }
         public SiparisStatu siparisStatu { get; set; }
 

@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace MarketApplication.Controllers
 {
-    [Authorize]
+    
     public class SepetController : BaseController
     {
         // GET: Siparis

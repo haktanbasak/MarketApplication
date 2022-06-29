@@ -44,7 +44,7 @@
                         </div>
                         <div class="col-lg-4 col-md-4">
                             <div class="filter__found">
-                                <h6><span>16</span> Products found</h6>
+                                <h6><span>@Model.Count</span> Ürün Bulundu</h6>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-3">
@@ -68,7 +68,7 @@
                                     </ul>
                                 </div>
                                 <div class="product__item__text">
-                                    <h6><a href="/Kategori/KategoriUrun/">@item.Ad</a></h6>
+                                    <h6><a href="/Urun/Detay?urunid=@item.UrunId">@item.Ad</a></h6>
                                     <h5>₺@item.Fiyat</h5>
                                 </div>
                             </div>

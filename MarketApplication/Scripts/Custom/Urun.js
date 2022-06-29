@@ -18,3 +18,19 @@ $(document).on("click", '[event="SepeteEkle"]', function (e) {
     var urunId = $(this).attr("UrunId");
     SepeteEkle(urunId, adet);
 })
+
+$(document).on("click", "#besin", function () {
+    bootbox.alert({
+        title: "Besin Değeri",
+        message: "her 100g - Kaloriler: 498kcal | Yağ: 25,80g | Karb: 57,80g | Prot: 6,70g ",
+        size: 'medium'
+    });
+})
+
+$(document).on("click", "#icindekiler", function () {
+    bootbox.alert({
+        title: "İçindekiler",
+        message: "her 100g - Kaloriler: 498kcal | Yağ: 25,80g | Karb: 57,80g | Prot: 6,70g ",
+        size: 'large'
+    });
+})

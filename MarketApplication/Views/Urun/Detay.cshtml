@@ -36,15 +36,15 @@
                         <img class="product__details__pic__item--large"
                              src="@Model.Fotograf" alt="">
                     </div>
-
                 </div>
             </div>
             <div class="col-lg-6 col-md-6">
                 <div class="product__details__text">
                     <h3>@Model.Ad</h3>
                     <div class="product__details__price">₺@Model.Fiyat</div>
-                    <p>
-                        @Model.Aciklama
+                    <span id="besin">Besin Değeri</span>
+                    <p id="icindekiler">
+                        İçindekiler
                     </p>
                     <div class="product__details__quantity">
                         <div class="quantity">
@@ -110,6 +110,7 @@
 <!-- Product Details Section End -->
 
 @section scripts{
-
+    <script src="~/Scripts/bootbox.min.js"></script>
     <script src="~/Scripts/Custom/Urun.js"></script>
+
 }

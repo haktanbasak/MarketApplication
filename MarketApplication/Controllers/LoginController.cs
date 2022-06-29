@@ -32,7 +32,7 @@ namespace MarketApplication.Controllers
             {
 
                 FormsAuthentication.SetAuthCookie(kullanici.KullaniciId.ToString(), false);
-                Session["kullanici"] = kullanici.KullaniciId.ToString();
+                Session.Add("Kullanici", kullanici.KullaniciId.ToString());
                 return Redirect("/");
             }
 
@@ -40,6 +40,33 @@ namespace MarketApplication.Controllers
 
             return View();
         }
+
+
+        [HttpGet]
+        public ActionResult Satici()
+        {
+            return View();
+        }
+
+
+        [HttpPost]
+        public ActionResult Satici(string mail, string password)
+        {
+            var satici = db.Satici.FirstOrDefault(x => x.Eposta == mail && x.Sifre == password);
+
+            if (satici != null)
+            {
+
+                FormsAuthentication.SetAuthCookie(satici.SaticiId.ToString(), false);
+                Session.Add("satici", satici.SaticiId.ToString());
+                return Redirect("/satici");
+            }
+
+            ViewBag.error = "mail yada parola hatalı.";
+
+            return View();
+        }
+
 
 
         public ActionResult Register()
@@ -64,6 +91,7 @@ namespace MarketApplication.Controllers
 
         public ActionResult LogOut()
         {
+            Session.Clear();
             FormsAuthentication.SignOut();
             return Redirect("/login");
         }

@@ -5,6 +5,8 @@
 
     List<Sepet> sepetler = (List<Sepet>)ViewBag.Sepetler;
     double toplam = 0.0;
+    double kurye = 7.0;
+    double total = 0.0;
 }
 
 
@@ -47,14 +49,16 @@
 
                                 @foreach (var item in sepetler)
                                 {
-                                    <li>@item.Urun.Ad <span>@item.SepetTutar</span></li>
+                                    <li>@item.Urun.Ad <span>₺@item.SepetTutar</span></li>
                                     toplam += item.SepetTutar;
+                                    total = toplam + kurye;
                                 }
 
 
                             </ul>
 
-                            <div class="checkout__order__total">Toplam <span>@toplam</span></div>
+                            <div class="checkout__order__total">Kurye <span>₺@kurye</span></div>
+                            <div class="checkout__order__total">Toplam <span>₺@total</span></div>
 
                                 <button type="submit" class="site-btn">Siparişi Tamamla</button>
                       
