@@ -148,6 +148,22 @@
     <Compile Include="Migrations\202206291827335_satici_ekleme.Designer.cs">
       <DependentUpon>202206291827335_satici_ekleme.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202207011222284_rating.cs" />
+    <Compile Include="Migrations\202207011222284_rating.Designer.cs">
+      <DependentUpon>202207011222284_rating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202207011238361_rating1.cs" />
+    <Compile Include="Migrations\202207011238361_rating1.Designer.cs">
+      <DependentUpon>202207011238361_rating1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202207011244346_mig32131.cs" />
+    <Compile Include="Migrations\202207011244346_mig32131.Designer.cs">
+      <DependentUpon>202207011244346_mig32131.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202207011253036_mig321.cs" />
+    <Compile Include="Migrations\202207011253036_mig321.Designer.cs">
+      <DependentUpon>202207011253036_mig321.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Kategori.cs" />
     <Compile Include="Models\Kullanici.cs" />
     <Compile Include="Models\Magaza.cs" />
@@ -406,6 +422,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202206291827335_satici_ekleme.resx">
       <DependentUpon>202206291827335_satici_ekleme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202207011222284_rating.resx">
+      <DependentUpon>202207011222284_rating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202207011238361_rating1.resx">
+      <DependentUpon>202207011238361_rating1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202207011244346_mig32131.resx">
+      <DependentUpon>202207011244346_mig32131.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202207011253036_mig321.resx">
+      <DependentUpon>202207011253036_mig321.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

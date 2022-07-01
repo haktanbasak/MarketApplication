@@ -4,6 +4,8 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
     List<MagazaKategori> mKategoriler = ViewBag.MagazaKategoriler;
 
+
+    
 }
 
 <!-- Breadcrumb Section Begin -->
@@ -83,18 +85,29 @@
                 <div class="row">
                     @foreach (var item in Model)
                     {
+                        var toplam = 0.0;
+                        foreach (var y in item.Yorumlar)
+                        {
+                            toplam += Convert.ToDouble(y.Rate);
+                        }
+
+                        var ortalama = (toplam / item.Yorumlar.Count()).ToString("n1");
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="product__item">
                                 <div class="product__item__pic set-bg" data-setbg="@item.KapakGorsel">
 
                                 </div>
                                 <div class="product__item__text">
-                                    <h6><a href="/Magaza/detay?magazaId=@item.MagazaId">@item.Ad</a></h6>
-                                    <h5>@item.MinimumFiyat</h5>
+                                    <h6><a href="/Magaza/detay?magazaId=@item.MagazaId">@item.Ad  </a></h6>
+                                    <h6>@ortalama ★</h6>
+                                    <h6>min. ₺@item.MinimumFiyat</h6>
                                 </div>
                             </div>
                         </div>
-                    }
+
+                      
+                        
+                    }                    
                 </div>
 
             </div>

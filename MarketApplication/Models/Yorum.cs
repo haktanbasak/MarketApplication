@@ -4,7 +4,7 @@
     {
         public int YorumId { get; set; }
         public string YorumIcerik { get; set; }
-
+        public double? Rate { get; set; }
 
         public int? UrunId { get; set; }
         public Urun Urun { get; set; }
@@ -14,8 +14,6 @@
 
         public int KullaniciId { get; set; }
         public Kullanici Kullanici { get; set; }
-
-
 
     }
 }

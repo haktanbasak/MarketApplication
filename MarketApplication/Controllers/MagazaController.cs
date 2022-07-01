@@ -11,14 +11,18 @@ namespace MarketApplication.Controllers
         public ActionResult Index(int id)
         {
             ViewBag.MagazaKategoriler = db.MagazaKategori.ToList();
-            var models = db.Magaza.Where(x => x.MagazaKategoriId == id).ToList();
+            var models = db.Magaza
+                .Include("Yorumlar")
+                .Where(x => x.MagazaKategoriId == id)
+                .ToList();
             return View(models);
         }
 
         public ActionResult Detay(int magazaId)
         {
             var model = db.Magaza
-                .Include("Urunler")
+                .Include("Urunler").
+                Include("Yorumlar.Kullanici")
                 .FirstOrDefault(x => x.MagazaId == magazaId);
             return View(model);
         }

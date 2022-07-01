@@ -14,17 +14,15 @@
                         <li><a href="/Kategori">Kategoriler</a></li>
                         @if (Session["Kullanici"] != null)
                         {
-                            <li><a href="/kullanici/siparisler">Siparişlerim</a></li>
-                        }
-                        else if(Session["satici"] != null) 
-                        { 
-                            <li><a href="/satici/siparisler">Siparişlerim</a></li>
-                        }
+            <li><a href="/kullanici/siparisler">Siparişlerim</a></li> }
+                        else if (Session["satici"] != null)
+                        {
+            <li><a href="/satici/siparisler">Siparişlerim</a></li>}
 
-                        @if(Session["satici"] != null || Session["Kullanici"] != null)
-                            {
+                        @if (Session["satici"] != null || Session["Kullanici"] != null)
+                        {
                             <li><a href="/login/logout">çıkış</a></li>
-                            }
+                        }
                     </ul>
                 </nav>
             </div>

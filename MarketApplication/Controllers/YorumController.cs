@@ -5,11 +5,12 @@ using System.Web.Mvc;
 
 namespace MarketApplication.Controllers
 {
+    [Authorize]
     public class YorumController : BaseController
     {
         public PartialViewResult MagazaYorumlar(int MagazaId)
         {
-            var yorumlar = db.Yorum.Where(x=>x.MagazaId == MagazaId).ToList();
+            var yorumlar = db.Yorum.Where(x => x.MagazaId == MagazaId).ToList();
             return PartialView(yorumlar);
         }
 

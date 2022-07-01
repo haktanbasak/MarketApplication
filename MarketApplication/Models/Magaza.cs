@@ -10,7 +10,6 @@ namespace MarketApplication.Models
         public string Konum { get; set; }
         public string KapakGorsel { get; set; }
 
-
         public virtual ICollection<Urun> Urunler { get; set; }
 
         public int MagazaKategoriId { get; set; }
