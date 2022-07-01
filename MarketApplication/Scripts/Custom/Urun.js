@@ -30,7 +30,7 @@ $(document).on("click", "#besin", function () {
 $(document).on("click", "#icindekiler", function () {
     bootbox.alert({
         title: "İçindekiler",
-        message: "her 100g - Kaloriler: 498kcal | Yağ: 25,80g | Karb: 57,80g | Prot: 6,70g ",
+        message: " Su, şeker, karbondioksit, renklendirici (karamel), doğal aroma vericiler, asitliği düzenleyiciler (fosforik asit, potasyum sitrat), koruyucu (sodyum benzoat), kafein (maks. 0,150 g/l). Kafein içerir. ",
         size: 'large'
     });
 })
